@@ -11,7 +11,7 @@ This is the first time, I am using Sass. So I did this in html, scss first and t
 
 ## portfolio:
 
-**WEBSITE:** ![**WEBSITE**](https:/johnfleurimond.com)
+**WEBSITE:** ![](https:/johnfleurimond.com)
 
 ## Installation
 
