@@ -1,0 +1,35 @@
+{
+  "name": "sass",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.11.0",
+    "prettier": "^1.16.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.8",
+    "sass": "^1.17.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "lint": "prettier --write src/**/*.{ts,tsx,js} && eslint --fix '**/*.{ts,tsx,js}'",
+    "prettier": "prettier --write src/**/*.{ts,tsx,js}",
+    "prettier-watch": "onchange  '**/*.{ts,tsx,js}' -- prettier --write {{changed}}",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+  }
+}

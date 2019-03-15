@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@mixin stripes($direction, $width-percent, $stripe-color, $stripe-background: #FFF) {
+  background: repeating-linear-gradient(
+    $direction,
+    $stripe-background,
+    $stripe-background ($width-percent - 1),
+    $stripe-color 1%,
+    $stripe-background $width-percent
+  );
+}
+
+@mixin backface-visibility {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+}
+
+@mixin transform($transformation) {
+  transform: $transformation;
+  -webkit-transform: $transformation;
+  -moz-transform: $transformation;
+  -ms-transform: $transformation;
+  -o-transform: $transformation;  
+}
+
+@mixin photo-content {
+  object-fit: cover;
+}
+
+//Add variables here:
+$translucent-white: rgba(255,255,255,0.3);
+$icon-square-length: 300px;
+$standard-border: 4px solid black;
+
+h1 {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  font-size: 14px;
+}
+
+.banner {
+  border : {
+    top: $standard-border;
+    bottom: $standard-border;
+}
+  font-family: 'Pacifico', cursive;
+  height: 400px;
+  background-image: url("lemonade.jpg");
+  .slogan {
+  position: absolute;
+  background-color: $translucent-white;
+  border: $standard-border;
+  top: 200px;
+  left: 25%;
+  width: 50%;
+  height: 200px;
+  text-align: center;
+    span {
+  font-size: 24px;
+  line-height: 200px;
+      
+}
+}
+}
+
+.container {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  .icon {
+    &:hover{
+      @include transform (rotatey(-180deg));  
+    }
+  display: inline-block;
+  margin: 2%;
+  border: $standard-border;
+  font-size: 32px;
+  width: $icon-square-length;
+height: $icon-square-length;
+}
+} 
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 10vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #F1E052;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: black;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
